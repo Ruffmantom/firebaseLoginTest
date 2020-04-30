@@ -4,6 +4,7 @@ import './App.css';
 import fire from "./config/fire"
 import Home from "./Home";
 import Login from "./Login";
+require('dotenv').config()
 
 class App extends Component{
   constructor(props){

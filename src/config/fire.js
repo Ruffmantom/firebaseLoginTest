@@ -1,16 +1,19 @@
 import firebase from "firebase";
+require('dotenv').config()
 
 var firebaseConfig = {
-    apiKey: "AIzaSyCgWvLHgO8-Nh39yn9Irrmm-PktXOFcUls",
-    authDomain: "testreact-2fdfc.firebaseapp.com",
-    databaseURL: "https://testreact-2fdfc.firebaseio.com",
-    projectId: "testreact-2fdfc",
-    storageBucket: "testreact-2fdfc.appspot.com",
-    messagingSenderId: "1047644101898",
-    appId: "1:1047644101898:web:4d7ba668bd7781c432aef3",
-    measurementId: "G-0EWVKW1Y93"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN ,
+    databaseURL: process.env.DB_URL,
+    projectId: process.env.PRO_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
   };
 
   const fire = firebase.initializeApp(firebaseConfig);
 
   export default fire;
+
+
